@@ -1,8 +1,8 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang='en'>
 <head>
     <meta charset='utf-8'>
-    <title>XML Viewer</title>
+    <title>XML SMS Backup Viewer</title>
 
     <!-- jQuery to help make some magic happen -->
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -20,6 +20,7 @@
 
 </head>
 <body>
+	<h2>XML SMS Backup Viewer</h2>
 <script type="text/javascript">
 
 	function handleFileSelect(evt) {
@@ -35,7 +36,7 @@
 		$xml = $( $.parseXML( text ) );
 		$xml.find("sms").each(function(){
 			var var_name = $(this).attr("contact_name");
-			if(!var_name || var_name == "(Unknown)") var_name = $(this).attr("address").replace('+1', '');
+			if(!var_name || var_name == "(Unknown)") var_name = $(this).attr("address").replace('+92', '0');
 			var temp = $.grep(docContents, function (e) { 
 				return e.name == var_name; 
 			});
@@ -73,7 +74,7 @@
 		
 		$.each(docContents, function(personIndex, personObject){
 			// Start the group member, label with the name
-			html += '<div class="panel panel-default"><div class="panel-heading">' +
+			html += '<div class="panel panel-primary"><div class="panel-heading">' +
 				'<h4 class="panel-title"><a data-target="#collapse' + personIndex + 
 				'" data-toggle="collapse" data-parent="#accordion">' +
 				personObject.name + ' - ' + personObject.texts.length + '</a></h4></div><div id="collapse' + 

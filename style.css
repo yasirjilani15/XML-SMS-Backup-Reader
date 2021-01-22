@@ -1,0 +1,32 @@
+body {
+	padding: 2em;
+}
+
+.panel-group .list-group {
+	margin-bottom: 0;
+}
+
+.panel-group .list-group .list-group-item {
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
+}
+
+.panel-group .list-group .list-group-item:last-child {
+	border-bottom: none;
+}
+
+.messageDateCell {
+	min-width: 180px;
+}
+
+.rcvd {
+	color: white;
+	background-color: rgb(103, 202, 90);
+}
+.sent {
+	color: white;
+	background-color: rgb(223, 86, 62);
+}
+
+
